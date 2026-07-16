@@ -1,0 +1,29 @@
+.blog {
+  font-family: "Microsoft YaHei", "微软雅黑", SimSun, "宋体", sans-serif;
+  font-size: 14px;
+  color: #333333;
+  line-height: 1.5;
+  /* background-color: aqua; */
+}
+
+
+/* index.css */
+/* 全局强制覆盖表格滚动条 */
+.ant-table .ant-table-container .ant-table-body .ant-table-body-inner {
+  scrollbar-width: thin;
+  scrollbar-color: #eaeaea transparent;
+}
+.ant-table .ant-table-container .ant-table-body .ant-table-body-inner::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.ant-table .ant-table-container .ant-table-body .ant-table-body-inner::-webkit-scrollbar-track {
+  background: transparent;
+}
+.ant-table .ant-table-container .ant-table-body .ant-table-body-inner::-webkit-scrollbar-thumb {
+  background: #eaeaea;
+  border-radius: 3px;
+}
+.ant-table .ant-table-container .ant-table-body .ant-table-body-inner::-webkit-scrollbar-thumb:hover {
+  background: #ccc;
+}
