@@ -1,0 +1,5 @@
+/* 侧边栏菜单文字 */
+.ant-menu-inline .ant-menu-item {
+  font-size: 8px;
+  height: 40px;
+}
