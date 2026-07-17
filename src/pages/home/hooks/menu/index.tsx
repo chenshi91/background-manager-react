@@ -4,7 +4,6 @@ import {useNavigate} from 'react-router-dom'
 import {
   DesktopOutlined,
   FileOutlined,
-  FileTextOutlined,
   PieChartOutlined,
   TeamOutlined,
   UserOutlined,

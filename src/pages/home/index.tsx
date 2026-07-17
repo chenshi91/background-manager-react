@@ -1,6 +1,6 @@
 import React from 'react';
-import { Breadcrumb, Layout, Menu, theme,Tabs, Table, Spin, FloatButton } from 'antd';
-import { Outlet, useNavigate, useRoutes, useLocation } from 'react-router-dom';
+import {  Layout, Menu, theme,Tabs } from 'antd';
+import { Outlet } from 'react-router-dom';
 import Msg from '../../components/msg'
 import {useHooks} from "./hooks"
 import "./index.css"
@@ -45,7 +45,7 @@ const App: React.FC = () => {
           </div>
         </Content>
         <Footer style={{ textAlign: 'center',backgroundColor:'guy',height:48 }}>
-          Ant Design Created by Ant UED
+          blog-admin-manager-system developed by chenshi at 2026
         </Footer>
 
         <Msg sendMsg={()=>console.info("home sendMsg")}></Msg>

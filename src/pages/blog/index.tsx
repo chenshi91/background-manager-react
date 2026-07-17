@@ -37,20 +37,13 @@ const useStyle = createStyles(({ css, token }) => {
 // let options:[]=[]
 
 const App: React.FC = () => {
-  //console.info("blog loading...")
-   //console.log(pkg) // 展开看里面有没有 http 123456
-  //console.info(a.name,"-",a.version)
-  //console.info("params:",params)
+
   const [articleList, setArticleList] = useState<ArticleItem[]>([]);
-  //const [pagination, setPagination] = useState({current:1,pageSize:10,total:0})
   const [current,setCurrent]=useState(1)
   const [pageSize,setPageSize]=useState(10)
   const [total,setTotal]=useState(0)
   const [loading, setLoading] = useState(false);
-  const location=useLocation()
-  // const [searchParams]=useSearchParams()
-  // console.info("location:",location)
-  //console.info("searchParams:",searchParams)
+
   const { styles } = useStyle();
   const { 
     filterDropDown_title,filterDropDown_content,filterDropDown_about,
