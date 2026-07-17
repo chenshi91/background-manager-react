@@ -38,7 +38,7 @@ const useStyle = createStyles(({ css, token }) => {
 
 const App: React.FC = () => {
   //console.info("blog loading...")
-   //console.log(pkg) // 展开看里面有没有 http11
+   //console.log(pkg) // 展开看里面有没有 http
   //console.info(a.name,"-",a.version)
   //console.info("params:",params)
   const [articleList, setArticleList] = useState<ArticleItem[]>([]);
