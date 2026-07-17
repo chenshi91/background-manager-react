@@ -136,7 +136,7 @@ const App: React.FC = () => {
         </Flex>
       )
     }},
-    { title:"操作2",width:150,fixed:"right",align:"center",
+    { title:"操作",width:150,fixed:"right",align:"center",
       render:(a:ArticleItem)=>{
         return (
           <div style={{display:'flex',justifyContent:'space-between',width:150,paddingRight:20}}>
