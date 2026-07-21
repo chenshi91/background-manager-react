@@ -53,7 +53,8 @@ const App: React.FC = () => {
   } =useHooks()
 
   const {data,setData,setOpen,open,handleCancel,handleOk,formRef,reset,submit}=useEditOrAdd()
-
+  const [options,setOptions]=useState<{label:string,value:string}[]>([])
+  
   useEffect(() => {
     // console.log("blog useEffect")
     setLoading(true)
@@ -65,11 +66,11 @@ const App: React.FC = () => {
       setTotal(count as number)
     }).catch(err=>console.log("err:",err))
     .finally(()=>setLoading(false))  
-  }, [current,pageSize])
+  }, [current,pageSize,options])
 
   
   
-  const [options,setOptions]=useState([])
+  
   useEffect(()=>{
     http.get<ArticleItemType>('/getBlogTypeList').then(res=>{
       // console.info("blogType=",res)
@@ -105,9 +106,8 @@ const App: React.FC = () => {
       fixed:'left'
     },
     { title:"简介", dataIndex:'excerpt',key:'excerpt',width:100 ,responsive:['sm'] },
-    { title:"分类", dataIndex:'category_id',key:'category_id',width:100,render:c=>{
-      return <Select defaultValue={c} options={options} style={{width:'100%'}}></Select>
-    } },
+    { title:"分类", dataIndex:'category_id',key:'category_id',width:100,render:c=><Select key={Date.now().toString()} value={c} options={options} style={{width:'100%'}}></Select>
+   },
     { title: '内容', dataIndex: 'content',filterDropdown:filterDropDown_content, onFilter:filter_content,
       key: 'content',ellipsis:true,width:100,render: render_content },
     { title: '封面图', dataIndex: 'content',width:100,
