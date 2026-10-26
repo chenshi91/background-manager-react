@@ -10,7 +10,6 @@ import type { TablePaginationConfig, SorterResult, FilterValue } from 'antd/es/t
 import type {ArticleItem,ArticleItemType} from './type'
 import TextArea from "antd/es/input/TextArea";
 import "./index.css"
-import {useLocation} from 'react-router-dom'
 import {getAllImgSrc} from '../../utils'
 import Space from "antd/lib/space";
 
