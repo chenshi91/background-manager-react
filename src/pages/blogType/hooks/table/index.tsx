@@ -5,7 +5,8 @@ import { Button,Space,Switch,type FormInstance,Divider, Popconfirm } from "antd"
 import {useHooks} from "../../../../hooks"
 import type { ArticleItemType } from "../../../../type"
 import {getDate} from "../../../../utils"
-import {type RequestResponse,http} from '@cf/demo-p1'
+// import {type RequestResponse,http} from '@cf/demo-p1'
+import {http} from '../../../../utils/http'
 
 export const useTableHooks=(setLoading:(p:boolean)=>void,setData:(p:any)=>void,setOpen:(p:boolean)=>void,form: FormInstance<any>)=>{
     
